@@ -9000,3 +9000,11 @@ const issues = [
     "url": "https://api.github.com/repos/learn-co-curriculum/js-donut-lab/issues/2"
   }
 ];
+// 'api.github.com' (in issue.url) with 'api-v2.github.com'
+
+
+const issuesWithUpdatedApiUrl = issues.map((issue) => {
+  return Object.assign({}, issue, {
+    url: issue.url.replace("api.github.com", "api-v2.github.com")
+  })
+})
